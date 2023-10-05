@@ -22,7 +22,6 @@ with open('books.csv', 'r', encoding='windows-1251') as csvfile:
         author_name = book[3]
         author_fulname = book[4]
         date = book[6]
-        print(author_name)
         if ((request in author_name) or (request in author_fulname)) and (('2016' in date) or ('2017' in date) or ('2018' in date)): 
 #Моя ошибка заключалась в том, что я совершал логическую операцию над строками, то есть дословно я передал программе: 2016 или 2017 или 2018, что, понятно, не имеет смысла, поэтому программа выводит первое значение
             search_res.append(name)  
